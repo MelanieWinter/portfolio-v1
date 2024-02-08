@@ -28,8 +28,8 @@ li {
 
 h2 {
     text-align: center;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
+    /* padding-top: 4rem;
+    padding-bottom: 2rem; */
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: var(--shadow-light);
@@ -39,14 +39,16 @@ h3 {
     text-align: center;
     color: var(--secondary-content);
     font-size: 1.3rem;
-    margin-top: -2rem;
     padding-bottom: 2rem;
     font-weight: 400;
 }
 
 p {
     margin: 0 auto;
-    width: 50ch;
+    width: 45ch;
+    color: #393939;
+    text-wrap: balance;
+    /* text-align: center; */
 }
 
 .primary-nav {
@@ -108,17 +110,21 @@ main {
 .to-top-btn:hover {
     /* box-shadow: none; */
     outline-offset: 4px;
-    outline: 2px solid var(--secondary-content);
+    /* outline: 2px solid var(--secondary-content); */
     color: var(--secondary-content);
 }
 
 section {
     width: 100%;
     min-height: 100vh;
+    padding: 2rem;
 }
 
 .about-section {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .resume-section {
@@ -141,9 +147,34 @@ section {
     padding-inline: 4rem;
 }
 
+.project-container a:hover {
+    color: var(--secondary-content);
+}
+
 .project-card {
     height: 10rem;
-    border: 1px solid var(--secondary-content);
+    /* border: 1px solid var(--secondary-content); */
     box-shadow: var(--shadow-light);
     border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1rem;
+}
+
+.profile-photo {
+    border-radius: 100px;
+    width: 10rem;
+    height: 10rem;
+    outline: 2px solid var(--secondary-content);
+    outline-offset: 6px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    /* box-shadow: var(--shadow-light); */
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
