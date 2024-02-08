@@ -33,6 +33,7 @@ h2 {
     font-size: 2.5rem;
     font-weight: 800;
     text-shadow: var(--shadow-light);
+    /* pointer-events: none; */
 }
 
 h3 {
@@ -41,6 +42,7 @@ h3 {
     font-size: 1.3rem;
     padding-bottom: 2rem;
     font-weight: 400;
+    /* pointer-events: none; */
 }
 
 p {
@@ -48,6 +50,7 @@ p {
     width: 45ch;
     color: #393939;
     text-wrap: balance;
+    /* pointer-events: none; */
     /* text-align: center; */
 }
 
@@ -118,13 +121,15 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
 }
 
 .about-section {
     background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    gap: 0;
 }
 
 .resume-section {
@@ -141,7 +146,7 @@ section {
 
 .project-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding-block: 2rem;
     padding-inline: 4rem;
@@ -170,6 +175,7 @@ section {
     outline-offset: 6px;
     margin-top: 4rem;
     margin-bottom: 2rem;
+    pointer-events: none;
     /* box-shadow: var(--shadow-light); */
 }
 
@@ -177,4 +183,21 @@ section {
     display: flex;
     justify-content: center;
     gap: 2rem;
+}
+
+.about-p {
+    text-align: center;
+    line-height: 1.5rem;
+}
+
+.about-p > span {
+    font-weight: 600;
+}
+
+.resume-section i {
+    font-size: 3rem;
+}
+
+.resume-section i:hover {
+    color: var(--secondary-content);
 }
