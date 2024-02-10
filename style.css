@@ -373,7 +373,8 @@ section {
     color: #ffffff;
 }
 
-.project-card:hover .overlay {
+.project-card:hover .overlay,
+.project-card:focus .overlay {
     display: flex;
 }
 
@@ -424,9 +425,6 @@ section {
 
     .primary-nav li {
         font-size: .75rem;
-    }
-
-    .primary-nav li:first-child {
         margin: 0;
     }
 
