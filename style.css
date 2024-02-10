@@ -340,7 +340,7 @@ section {
 .project-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 2rem;
 }
 
@@ -374,7 +374,8 @@ section {
 }
 
 .project-card:hover .overlay,
-.project-card:focus .overlay {
+.project-card:focus .overlay,
+.project-card:active .overlay {
     display: flex;
 }
 
@@ -416,7 +417,6 @@ section {
     .project div li {
         font-size: .75rem;
         padding-inline: .25rem;
-        /* border: 1px solid red; */
     }
 
     .primary-footer {
@@ -451,5 +451,9 @@ section {
 
     .overlay i {
         font-size: 2rem;
+    }
+
+    .project-container {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     }
 }
