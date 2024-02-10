@@ -340,7 +340,7 @@ section {
 .project-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 2rem;
 }
 
@@ -419,7 +419,20 @@ section {
         display: none;
     }
 
-    .primary-nav {
-        display: none;
+    .primary-nav li {
+        font-size: .75rem;
+    }
+
+    .primary-nav ul {
+        justify-content: center;
+        gap: .5rem;
+    }
+
+    .about-section p {
+        width: 90%;
+    }
+
+    .about-section img {
+        margin-top: -5rem;
     }
 }
