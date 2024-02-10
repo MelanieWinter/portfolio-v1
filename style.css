@@ -135,22 +135,9 @@ section {
     font-weight: 400;
 }
 
-/* .project-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding-block: 2rem;
-    padding-inline: 4rem;
-} */
-
 .project-card {
-    /* height: 10rem; */
-    /* border: 1px solid var(--secondary-content); */
     box-shadow: var(--shadow-light);
     border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
     padding: 1rem;
 }
 
@@ -163,7 +150,6 @@ section {
     margin-top: 4rem;
     margin-bottom: 2rem;
     pointer-events: none;
-    /* box-shadow: var(--shadow-light); */
 }
 
 .project-links {
