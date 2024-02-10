@@ -70,7 +70,8 @@ p {
 .to-top-btn:hover,
 .resume-section i:hover,
 .contact-form input:last-child:hover,
-.resume-div-1 a:hover {
+.resume-div-1 a:hover,
+.project-links i:hover {
     color: var(--secondary-content);
 }
 
@@ -325,13 +326,14 @@ section {
 }
 
 .project-container {
+    width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 2rem;
 }
 
 .project-card {
-    width: 30rem;
+    /* width: 30rem; */
     height: 15rem;
     background-position: center;
     background-size: cover;
@@ -342,7 +344,7 @@ section {
 
 .project-card .overlay {
     position: absolute;
-    width: 30rem;
+    width:100%;
     height: 15rem;
     border-radius: 15px;
     background-color: #00000097;
@@ -364,5 +366,21 @@ section {
 }
 
 .overlay ul {
-    /* border: 1px solid red; */
+    padding-inline: 3rem;
+}
+
+.project-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 1rem;
+}
+
+.project-links i {
+    font-size: 1.25rem;
+}
+
+.overlay h3 {
+    font-size: 1.5rem;
 }
