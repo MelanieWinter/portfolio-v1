@@ -68,7 +68,8 @@ p {
 .project-container a:hover,
 .to-top-btn:hover,
 .resume-section i:hover,
-.contact-form input:last-child:hover {
+.contact-form input:last-child:hover,
+.resume-div-1 a:hover {
     color: var(--secondary-content);
 }
 
