@@ -444,4 +444,8 @@ section {
     section {
         margin-bottom: 3rem;
     }
+
+    .overlay ul {
+        padding: 1rem;
+    }
 }
