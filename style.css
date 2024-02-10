@@ -107,6 +107,7 @@ main {
     padding-block: .5rem;
     box-shadow: var(--shadow-light);
     border-radius: 5px;
+    z-index: 900;
 }
 
 .to-top-btn:hover {
