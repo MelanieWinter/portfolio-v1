@@ -233,11 +233,11 @@ section {
     padding-top: .75rem;
 }
 
-.project div:first-child {
+/* .project div:first-child {
     font-weight: 700;
-}
+} */
 
-.project div:nth-child(2),
+/* .project div:nth-child(2), */
 .education div {
     font-size: .75rem;
     font-style: italic;
@@ -328,10 +328,25 @@ section {
     background-size: cover;
     border-radius: 15px;
     box-shadow: var(--shadow-light);
-
+    position: relative;
 }
 
 .project-card .overlay {
+    position: absolute;
+    width: 30rem;
+    height: 15rem;
+    border-radius: 15px;
+    background-color: #00000083;
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+.project-card .overlay * {
+    color: #ffffff;
 }
 
+.project-card:hover .overlay {
+    display: flex;
+}
