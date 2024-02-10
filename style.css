@@ -411,8 +411,11 @@ section {
         font-size: 1rem;
     }
 
-    .resume-div li {
+    .resume-div-3 li,
+    .project div li {
         font-size: .75rem;
+        padding-inline: .25rem;
+        /* border: 1px solid red; */
     }
 
     .primary-footer {
@@ -421,6 +424,10 @@ section {
 
     .primary-nav li {
         font-size: .75rem;
+    }
+
+    .primary-nav li:first-child {
+        margin: 0;
     }
 
     .primary-nav ul {
@@ -434,5 +441,9 @@ section {
 
     .about-section img {
         margin-top: -5rem;
+    }
+
+    section {
+        margin-bottom: 3rem;
     }
 }
