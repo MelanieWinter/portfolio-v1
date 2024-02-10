@@ -2,6 +2,7 @@
     --primary-content: #000000;
     --secondary-content: #bf05a3;
     --shadow-light: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    --shadow-dark: 1px 1px 4px rgba(0, 0, 0, 0.7);
 }
 
 * {
@@ -202,7 +203,8 @@ section {
 }
 
 .resume-div-3 ul,
-.project div ul {
+.project div ul,
+.overlay ul {
     display: flex;
     flex-wrap: wrap;
     column-gap: .5rem;
@@ -211,12 +213,19 @@ section {
 }
 
 .resume-div-3 li,
-.project div li {
-    /* background-color: #e3e3e3;  */
+.project div li,
+.overlay li {
     box-shadow: var(--shadow-light);
     border-radius: 50px;
     width: fit-content;
     padding-inline: 1rem;
+}
+
+.overlay li {
+    /* outline: 1px solid var(--secondary-content); */
+    padding-block: .05rem;
+    box-shadow: var(--shadow-dark);
+    background-color: #9191914e;
 }
 
 
@@ -336,11 +345,14 @@ section {
     width: 30rem;
     height: 15rem;
     border-radius: 15px;
-    background-color: #00000083;
+    background-color: #00000097;
     display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    gap: 1rem;
+    backdrop-filter: blur(5px);
 } 
 
 .project-card .overlay * {
@@ -349,4 +361,8 @@ section {
 
 .project-card:hover .overlay {
     display: flex;
+}
+
+.overlay ul {
+    /* border: 1px solid red; */
 }
