@@ -446,6 +446,10 @@ section {
     }
 
     .overlay ul {
-        padding: 1rem;
+        padding: 0rem;
+    }
+
+    .overlay i {
+        font-size: 2rem;
     }
 }
