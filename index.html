@@ -5,8 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/fc377b8991.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "EjZJsDDfqaJkPPWiT",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_djaf62f', 'template_o1h7fju', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Melanie Winter's Developer Portfolio</title>
 </head>
 <body>
     
@@ -100,6 +122,10 @@
         </section>
 
         <section class="resume-section" id="resume">
+            <h2>Resume</h2>
+            <a href="https://docs.google.com/document/d/1M39E-6HR_BEgkjHn3LA70qOQD6CELacEgx5kcyxo82w/edit?usp=sharing">
+                <i class="fa-solid fa-file-word"></i>
+            </a>
             <div class="resume-div">
                 <div class="resume-div-1">
                     <h2>Melanie Winter</h2>
@@ -115,38 +141,48 @@
                 </div>
                 <div class="resume-div-3">
                     <h3>Technical Stack</h3>
-                    <div class="div-3-ul">
-                        <ul>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>TypeScript</li>
-                            <li>Node.js</li>
-                            <li>Express.js</li>
-                            <li>Django</li>
-                            <li>Python</li>
-                            <li>PostgreSQL</li>
-                            <li>MongoDB</li>
-                            <li>Framer Motion</li>
-                            <li>React Transition Group</li>
-                            <li>Tailwind</li>
-                            <li>Bootstrap</li>
-                            <li>MVC</li>
-                            <li>OOP</li>
-                            <li>Google OAuth</li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Django</li>
+                        <li>Python</li>
+                        <li>PostgreSQL</li>
+                        <li>MongoDB</li>
+                        <li>Framer Motion</li>
+                        <li>React Transition Group</li>
+                        <li>Tailwind</li>
+                        <li>Bootstrap</li>
+                        <li>MVC</li>
+                        <li>OOP</li>
+                        <li>Google OAuth</li>
+                    </ul>
                 </div>
                 <div class="resume-div-4">
                     <h3>Technical Projects</h3>
-                    <div>
-                        <span>
-                            Rowell Ranch - GitHub | Demo  - MongoDB | Express.js | React | Node.js | HTML | CSS | Stripe API
-                        </span>
-                        <span>
+                    <div class="project">
+                        <div>
+                            <span>
+                                Rowell Ranch -&nbsp;
+                                <a href="https://github.com/MelanieWinter/rowell-ranch">GitHub</a>
+                                <a href="https://rowell-ranch-b04533444824.herokuapp.com/">Demo</a> 
+                            </span>
+                            <ul>
+                                <li>MongoBD</li>
+                                <li>Express.js</li>
+                                <li>React</li>
+                                <li>Node.js</li>
+                                <li>HTML</li>
+                                <li>Stripe API</li>
+                            </ul>
+                        </div>
+                        <div>
                             Single-page application for the Rowell Ranch Rodeo, enabling users to securely purchase tickets using the Stripe API and empowering admins to manage events effortlessly.
-                        </span>
+                        </div>
                         <ul>
                             <li>
                                 Implemented authentication, ticket purchasing, and order history functionalities for users as well as event creation, updating, and deleting capabilities for admins.
@@ -156,13 +192,25 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="resume-div-5">
-                        <span>
-                            Melodix - GitHub | App - Python | Django | HTML | CSS | POSTGRESQL | AWS S3
-                        </span>
-                        <span>
+                    <div class="project">
+                        <div>
+                            <span>
+                                Melodix -&nbsp; 
+                                <a href="https://github.com/tworem23/melodix">GitHub</a>
+                                <a href="https://melodix-aae27a8acf5b.herokuapp.com/">Demo</a> 
+                            </span>
+                            <ul>
+                                <li>Python</li>
+                                <li>Django</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>PostgreSQL</li>
+                                <li>AWS S3</li>
+                            </ul>
+                        </div>
+                        <div>
                             A full-stack web application allowing users to create, manage, and share personalized playlists with secure authentication and intuitive playlist management features.
-                        </span>
+                        </div>
                         <ul>
                             <li>
                                 Worked in a team to implement user authentication, and CRUD operations for playlists, utilizing Django for backend and PostgreSQL for data storage.
@@ -173,9 +221,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="resume-div-6">
+                <div class="resume-div-5">
                     <h3>Experience</h3>
-                    <div>
+                    <div class="experience">
                         <p>
                             <span>
                                 SAW Entertainment, Customer Liaison 
@@ -193,7 +241,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="experience">
                         <p>
                             <span>
                                 High Powered Conglomerate, Operations Manager 
@@ -212,9 +260,9 @@
                         </ul>
                     </div>
                 </div>
-                <div class="resume-div-7">
+                <div class="resume-div-6">
                     <h3>Education</h3>
-                    <div>
+                    <div class="education">
                         <p>
                             <span>
                                 General Assembly, Software Engineering
@@ -223,11 +271,11 @@
                                 Remote, Graduated 02/2024
                             </span>
                         </p>
-                        <p>
+                        <div>
                             Full-stack software engineering 500+ hour program focused on product development fundamentals, object-oriented programming, MVC frameworks, data modeling, and team collaboration strategies. 
-                        </p>
+                        </div>
                     </div>
-                    <div>
+                    <div class="education">
                         <p>
                             <span>
                                 De Anza College, Business Management/Accounting 
@@ -239,16 +287,25 @@
                     </div>
                 </div>
             </div>
-            <a href="https://docs.google.com/document/d/1M39E-6HR_BEgkjHn3LA70qOQD6CELacEgx5kcyxo82w/edit?usp=sharing">
-                <i class="fa-solid fa-file-word"></i>
-            </a>
         </section>
-        
         <section class="contact-section" id="contact">
             <h2>Contact</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit temporibus rerum tenetur, cumque alias, dolor velit quis placeat, quo excepturi sed enim explicabo voluptatum cum dicta illum possimus est unde ut id! Expedita a, nihil optio iusto vero sequi exercitationem eveniet accusantium dolorem modi obcaecati cum voluptas illo dicta rem?
-            </p>
+            <a 
+                href="mailto:melaniewinter830@gmail.com?
+                subject=Portfolio%20Inquiry:%20[Your%20Name]"
+            >
+                melaniewinter830@gmail.com
+            </a>
+            <form class="contact-form" id="contact-form">
+                <input type="hidden" name="contact_number">
+                <label>Name</label>
+                <input type="text" name="user_name">
+                <label>Email</label>
+                <input type="email" name="user_email">
+                <label>Message</label>
+                <textarea name="message"></textarea>
+                <input type="submit" value="Send">
+            </form>
         </section>
     </main>
 
