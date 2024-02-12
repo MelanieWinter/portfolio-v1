@@ -374,14 +374,21 @@ section {
     color: #ffffff;
 }
 
-.project-card:hover .overlay,
+/* .project-card:hover .overlay,
 .project-card:focus .overlay,
 .project-card:active .overlay {
     display: flex;
-}
+} */
 
 .overlay ul {
     padding-inline: 3rem;
+}
+
+.resume-section img {
+    width: 100%;
+    /* margin-top: -2rem; */
+    box-shadow: var(--shadow-light);
+    border-radius: 25px;
 }
 
 .project-links {
