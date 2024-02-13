@@ -386,7 +386,6 @@ section {
 
 .resume-section img {
     width: 100%;
-    /* margin-top: -2rem; */
     box-shadow: var(--shadow-light);
     border-radius: 25px;
 }
